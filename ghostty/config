@@ -8,10 +8,10 @@ bold-is-bright = true
 
 # Window
 window-theme = ghostty
-window-decoration = server
 window-height = 20
 window-width = 85
 gtk-titlebar-hide-when-maximized = true
+title = " "
 
 # Background
 background-opacity = 0.9
