@@ -1,0 +1,32 @@
+# Theme
+theme = tokyonight
+
+# Fonts
+font-family = "JetBrainsMono Nerd Font Mono"
+font-size = 12
+bold-is-bright = true
+
+# Window
+window-theme = ghostty
+window-decoration = server
+window-height = 20
+window-width = 85
+gtk-titlebar-hide-when-maximized = true
+
+# Background
+background-opacity = 0.9
+
+# Keybinds
+keybind = ctrl+up=new_split:up
+keybind = ctrl+down=new_split:down
+keybind = ctrl+left=new_split:left
+keybind = ctrl+right=new_split:right
+
+keybind = ctrl+shift+up=goto_split:up
+keybind = ctrl+shift+down=goto_split:down
+keybind = ctrl+shift+left=goto_split:left
+keybind = ctrl+shift+right=goto_split:right
+
+# misc
+auto-update = check
+auto-update-channel = stable
