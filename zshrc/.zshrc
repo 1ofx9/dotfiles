@@ -55,8 +55,6 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color=auto $realpath'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-eval "$(zoxide init zsh)"
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
@@ -69,6 +67,7 @@ alias edit-zsh='nvim ~/.zshrc'
 alias ani='ani-cli'
 alias cd='z'
 alias sudo='sudo '
+alias ..='cd ..'
 
 alias ls="eza --icons --git"
 alias ll="eza -l --icons --git"
@@ -76,6 +75,8 @@ alias lt="eza --tree --long --icons --git"
 
 # Aliases end
 
+source <(fzf --zsh)
+eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
 # PROFILE STARTUP TIMINGS
