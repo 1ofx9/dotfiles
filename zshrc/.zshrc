@@ -66,7 +66,7 @@ pnpm() { lazy_pnpm; pnpm "$@"; }
 # Conditional tool loading
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 command -v starship >/dev/null && eval "$(starship init zsh)"
-command -v zoxide >/dev/null && eval "$(zoxide init zsh --cmd cd)"
+command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
 
 # Aliases
 alias ls='eza --icons --git'
