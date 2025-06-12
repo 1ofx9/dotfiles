@@ -80,6 +80,7 @@ alias cd='z'
 alias ani='ani-cli'
 alias ..='cd ..'
 alias sudo='sudo '
+alias rm='rm -v'
 
 
 # zsh misc
