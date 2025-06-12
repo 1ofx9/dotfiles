@@ -2,7 +2,7 @@
 theme = tokyonight
 
 # Fonts
-font-family = "JetBrainsMono Nerd Font Mono"
+font-family = "JetBrainsMono Nerd Font"
 font-size = 12
 bold-is-bright = true
 
