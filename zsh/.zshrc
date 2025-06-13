@@ -81,6 +81,7 @@ alias ani='ani-cli'
 alias ..='cd ..'
 alias sudo='sudo '
 alias rm='rm -v'
+alias grep="grep --color=auto"
 
 
 # zsh misc
