@@ -1,5 +1,5 @@
 # Theme
-theme = tokyonight
+theme = catppuccin-mocha
 
 # Fonts
 font-family = "JetBrainsMono Nerd Font"
@@ -14,7 +14,7 @@ gtk-titlebar-hide-when-maximized = true
 title = " "
 
 # Background
-background-opacity = 0.9
+background-opacity = 0.8
 
 # Keybinds
 keybind = ctrl+up=new_split:up
