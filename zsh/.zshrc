@@ -1,6 +1,3 @@
-# Path - minimal exports first
-export PATH="$HOME/.local/bin:$PATH"
-
 # Zinit - minimal initialization
 ZINIT_HOME="$HOME/.local/share/zinit/zinit.git"
 [[ -f "${ZINIT_HOME}/zinit.zsh" ]] || git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
@@ -43,30 +40,34 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':fzf-tab:complete:(z|zi|cd|zoxide):*' fzf-preview 'eza --color=always $realpath'
 
-# Lazy load heavy tools
-lazy_nvm() {
-  unset -f nvm node npm npx yarn
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-  [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
-}
-nvm() { lazy_nvm; nvm "$@"; }
-node() { lazy_nvm; node "$@"; }
-npm() { lazy_nvm; npm "$@"; }
-npx() { lazy_nvm; npx "$@"; }
-yarn() { lazy_nvm; yarn "$@"; }
+# Load NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
 
-lazy_pnpm() {
-  unset -f pnpm
-  export PNPM_HOME="$HOME/.local/share/pnpm"
-  export PATH="$PNPM_HOME:$PATH"
-}
-pnpm() { lazy_pnpm; pnpm "$@"; }
+# Load PNPM (ensure pnpm is added to PATH)
+export PNPM_HOME="$HOME/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/home/soooobus/.zsh/completions:"* ]]; then export FPATH="/home/soooobus/.zsh/completions:$FPATH"; fi
+
+. "/home/soooobus/.deno/env"
+
+# bun completions
+[ -s "/home/soooobus/.bun/_bun" ] && source "/home/soooobus/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Conditional tool loading
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 command -v starship >/dev/null && eval "$(starship init zsh)"
 command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
+
+# Conda 
+export PATH="/home/soooobus/miniconda3/bin:$PATH" 
 
 # Aliases
 alias ls='eza --icons --git'
