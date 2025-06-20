@@ -1,0 +1,40 @@
+{
+	// Editor
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": true,
+	"editor.formatOnSaveMode": "file",
+	"editor.fontSize": 14,
+	"editor.fontFamily": "JetBrainsMono Nerd Font",
+	"editor.fontLigatures": true,
+	"editor.cursorBlinking": "expand",
+	"editor.cursorSmoothCaretAnimation": "on",
+	"editor.accessibilitySupport": "off",
+	"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+	"editor.smoothScrolling": true,
+	"diffEditor.codeLens": true,
+	"editor.minimap.enabled": false,
+	"editor.inlineSuggest.suppressSuggestions": true,
+	"editor.bracketPairColorization.enabled": true,
+	"editor.guides.bracketPairs": "active",
+	"editor.hover.delay": 500,
+	"editor.matchBrackets": "never",
+	"editor.linkedEditing": true,
+	// Window
+	"window.commandCenter": true,
+	// Explorer
+	"explorer.compactFolders": false,
+	"explorer.confirmDragAndDrop": false,
+	"explorer.confirmDelete": false,
+	// Workbench
+	"workbench.commandPalette.preserveInput": true,
+	"workbench.layoutControl.enabled": false,
+	"workbench.navigationControl.enabled": false,
+	"files.autoSave": "onFocusChange",
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	// Terminal
+	"terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+	"terminal.integrated.fontSize": 14,
+	"terminal.integrated.cursorWidth": 2,
+	"terminal.integrated.cursorStyle": "line",
+	"terminal.integrated.cursorStyleInactive": "none"
+}
