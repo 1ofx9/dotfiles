@@ -83,6 +83,8 @@ alias ..='cd ..'
 alias sudo='sudo '
 alias rm='rm -v'
 alias grep="grep --color=auto"
+alias c="clear"
+alias e="exit"
 
 # zsh misc
 edit-zsh() {
