@@ -27,10 +27,6 @@ ze() {
   "${e[$(( ${c:-4} ))]}" ~/.zshrc
 }
 
-# starship
-export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
-eval "$(starship init zsh)"
-
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
